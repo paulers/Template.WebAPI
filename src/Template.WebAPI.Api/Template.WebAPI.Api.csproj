@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+    
+    <PropertyGroup>
+      <UserSecretsId>6491e8bc-8f83-4608-b645-9b3ce4c45b12</UserSecretsId>
+      <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Asp.Versioning.Http" />
+        <PackageReference Include="MailKit" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Serilog.AspNetCore" />
+        <PackageReference Include="System.Security.Cryptography.Pkcs" />
+    </ItemGroup>
+	
+    <ItemGroup>
+      <Content Include="..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+	
+    <ItemGroup>
+      <ProjectReference Include="..\Template.WebAPI.Data\Template.WebAPI.Data.csproj" />
+    </ItemGroup>
+
+</Project>
